@@ -3,6 +3,8 @@ node_js: stable
 
 # S: Build Lifecycle
 install:
+  - yum install ruby
+  - gem install jekyll
   - npm install
 
 #before_script:
