@@ -3,7 +3,7 @@ node_js: stable
 
 # S: Build Lifecycle
 install:
-  - apt-get install ruby
+  - sudo apt-get install ruby
   - gem install jekyll
   - npm install
 
