@@ -6,7 +6,7 @@
 
 # 部署
 
-> 采用`jekyllrb`搭建部署，https://jekyllrb.com
+> 采用`jekyll`搭建部署，https://jekyllrb.com
 
 ```bash
 # install jekyll
