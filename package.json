@@ -9,14 +9,14 @@
     "build-clean": "rm css/website.css",
     "build-sass": "node-sass --output-style compressed css/website.sass css/website.css",
     "develop": "node-sass css/website.sass css/website.css",
-    "start": "npm run develop -- --watch"
+    "start": "npm run develop -- --watch",
+    "deploy": "jekyll build --destination dist"
   },
   "keywords": [
     "css",
     "sass",
     "jekyll"
   ],
-  "author": "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",

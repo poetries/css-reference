@@ -12,7 +12,12 @@
 # install jekyll
 gem install bundler jekyll
 
-# 生成静态文件
-bundle exec jekyll serve
+# 本地开发
+jekyll serve
 # Now browse to http://localhost:4000
+
+# 生成静态文件到dist
+# https://www.jekyll.com.cn/docs/usage/
+jekyll build --destination dist 
 ```
+
