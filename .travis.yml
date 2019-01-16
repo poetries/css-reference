@@ -4,7 +4,7 @@ node_js: stable
 # S: Build Lifecycle
 install:
   - sudo apt-get install ruby
-  - gem install jekyll
+  - gem install bundler jekyll
   - npm install
 
 #before_script:
