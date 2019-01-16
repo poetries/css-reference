@@ -1,0 +1,93 @@
+---
+layout: single
+property_name: flex-grow
+---
+
+<section id="flex-grow" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-grow/" data-property-name="flex-grow" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="flex-grow">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-grow" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#flex-grow"><span>#</span>flex-grow</a>
+    </h2>
+    <div class="property-description">
+      <p>定义了元素当有可用空间的时候如何 <strong>占用</strong>。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.flex-grow { background: #310736;border-radius: 3px;display: flex;padding: 1em; }</style>
+
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-grow: 0;">flex-grow: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>元素 <strong>不</strong> 不占用剩余空间。它仅仅占用自身所需空间。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-grow " id="flex-grow-0"><p class="block block--alpha"><strong>Target</strong><p class="block block--pink">Item</p><p class="block block--yellow">Item</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-grow-0{ flex-grow:0;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-grow: 1;">flex-grow: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>元素将 <strong>占用</strong> 扩展因子 <strong>1</strong>。如果没有其他元素也设置了 <code>flex-grow</code> 的话，它将占用剩下的所有空间。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-grow " id="flex-grow-1"><p class="block block--alpha"><strong>Target</strong><p class="block block--pink">Item</p><p class="block block--yellow">Item</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-grow-1{ flex-grow:1;}</style>
+        <style type="text/css">#flex-grow-1 .block--alpha { flex-grow: 1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-grow: 2;">flex-grow: 2;</code>
+        </p>
+        <div class="example-description">
+          <p>因为 flex-grow 的值是<strong>相对的</strong>，它的具体表现还取决于此元素的<strong>同级元素</strong>。</p>
+<p>在这个例子中，剩余空间被分隔成了 <strong>3</strong> 个扩展因子：</p>
+<ul><li>三分之<strong>一</strong>分配给了<strong>绿色</strong> 元素</li><li>三分之<strong>二</strong>分配给了<strong>粉色</strong>元素</li><li>没有其他空间分配给<strong>黄色</strong>元素，它保留了自身原本占用的大小。</li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-grow " id="flex-grow-2"><p class="block block--alpha">Item<br><strong>1</strong><p class="block block--pink">Item<br><strong>2</strong></p><p class="block block--yellow">Item<br><strong>0</strong></p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-grow-2{ flex-grow:2;}</style>
+        <style type="text/css">#flex-grow-2 .block--alpha { flex-grow: 1; }#flex-grow-2 .block--pink { flex-grow: 2; }</style>
+    </section>
+
+</section>

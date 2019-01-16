@@ -1,0 +1,160 @@
+---
+layout: single
+property_name: align-self
+---
+
+<section id="align-self" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/align-self/" data-property-name="align-self" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="align-self">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-self" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#align-self"><span>#</span>align-self</a>
+    </h2>
+    <div class="property-description">
+      <p>原理如同 <code>align-items</code>，但是仅仅作用于<strong>一个</strong> flexbox 元素，而不是作用于所有的元素</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.align-self { align-items: center;background: hsl(0, 0%, 95%);display: flex;height: 200px;justify-content: center;padding: 0; }</style>
+
+
+    <style type="text/css">.align-self .square { height: 50px;margin: 0 2px;width: calc(20% - 4px); }.align-self .square:nth-child(2) { background: #05ffb0;color: #310736; }.align-self .square:nth-child(4) { height: 75px; }.align-self .line { left: 2px;position: absolute;right: 2px; }.align-self .line--default { top: 50%; }.align-self .line--default:before { content: "Items"; }.align-self .line--red:before { content: "Self"; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: auto;">align-self: auto;</code>
+        </p>
+        <div class="example-description">
+          <p>元素使用 <code>align-items</code> 的值。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-auto"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-auto{ align-self:auto;}</style>
+        <style type="text/css">#align-self-auto .target { align-self: auto; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: flex-start;">align-self: flex-start;</code>
+        </p>
+        <div class="example-description">
+          <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: flex-start</code>，那么仅仅目标元素对齐于纵向轴的起始处。</p>
+          <p>默认，这就意味着元素对齐于<em>垂直</em>方向的<em>顶部</em>。</p>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-flex-start"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-flex-start{ align-self:flex-start;}</style>
+        <style type="text/css">#align-self-flex-start .target { align-self: flex-start; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: flex-end;">align-self: flex-end;</code>
+        </p>
+        <div class="example-description">
+          <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: flex-end</code>，那么仅仅目标元素对齐于纵向轴的末尾处。</p>
+          <p>默认，这就意味着元素对齐于<em>垂直</em>方向的<em>底部</em>。</p>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-flex-end"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-flex-end{ align-self:flex-end;}</style>
+        <style type="text/css">#align-self-flex-end .line--red { bottom: 0; }#align-self-flex-end .target { align-self: flex-end; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: center;">align-self: center;</code>
+        </p>
+        <div class="example-description">
+          <p>如果容器有属性 <code>align-items: flex-start</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: center</code>，那么仅仅目标元素对齐于纵向轴的中间。</p>
+          <p>默认，这就意味着元素对齐于<em>垂直</em>方向的<em>中间</em>。</p>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-center"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-center{ align-self:center;}</style>
+        <style type="text/css">#align-self-center{ align-items: flex-start; }</style>
+        <style type="text/css">#align-self-center .line--default { top: 0; }#align-self-center .line--red { top: 50%; }#align-self-center .target { align-self: center; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: baseline;">align-self: baseline;</code>
+        </p>
+        <div class="example-description">
+          <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: baseline</code>，那么仅仅目标元素对齐于纵向轴的 baseline。</p>
+          <p>默认，这就意味着元素沿着文字的 baseline 对齐。</p>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-baseline"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-baseline{ align-self:baseline;}</style>
+        <style type="text/css">#align-self-baseline .line--default { top: 50%; }#align-self-baseline .line--red { top: 30px; }#align-self-baseline .target { align-self: baseline; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: stretch;">align-self: stretch;</code>
+        </p>
+        <div class="example-description">
+          <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: stretch</code>，那么仅仅目标元素拉伸填充于整个纵向轴。</p>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-stretch"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-stretch{ align-self:stretch;}</style>
+        <style type="text/css">#align-self-stretch .line--default { top: 50%; }#align-self-stretch .line--red { display: none; }#align-self-stretch .target { align-self: stretch;height: auto; }</style>
+    </section>
+
+</section>

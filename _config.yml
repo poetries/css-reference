@@ -1,0 +1,8 @@
+title: CSS Reference |  CSS 属性可视化文档
+subtitle: " CSS 属性可视化文档"
+description: "cssreference文档使用了大量的可视化图形以及动画对属性进行了解释。"
+share: "CSS Reference: a  visual guide to the most popular CSS properties."
+url: http://blog.poetries.top/css-reference
+markdown: kramdown
+permalink: pretty
+exclude: ['node_modules']

@@ -1,0 +1,111 @@
+---
+layout: single
+property_name: order
+---
+
+<section id="order" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/order/" data-property-name="order" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="order">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/order" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#order"><span>#</span>order</a>
+    </h2>
+    <div class="property-description">
+      <p>定义元素的排序。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.order { display: flex; }</style>
+
+
+    <style type="text/css">.order .block { flex-grow: 1;flex-shrink: 1; }.order em { font-style: normal; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: 0;">order: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>元素的排序按照其 <strong>HTML 代码</strong>中的排序。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-0"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 0</strong></em></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: 1;">order: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>元素的排序与其<em>同级元素</em>具有<strong>相关性</strong>。最终的排序将会考虑到所有元素的排序值。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order-1 .block--pink { order: 1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: -1;">order: -1;</code>
+        </p>
+        <div class="example-description">
+          <p>值你可以使用<strong>负数</strong>。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order--1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: -1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order--1 .block--pink { order: -1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: 9;">order: 9;</code>
+        </p>
+        <div class="example-description">
+          <p>你可以为每一个元素设置<strong>不同的</strong>值。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-9"><p class="block block--alpha">One<br><em>order: 13</em></p><p class="block block--beta">Two<br><em>order: -7</em></p><p class="block block--pink"><strong>Target<br><em>order: 9</em></strong></p><p class="block block--yellow">Four<br><em>order: 5</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order-9 .block--alpha { order: 13; }#order-9 .block--beta { order: -7; }#order-9 .block--pink { order: 9; }#order-9 .block--yellow { order: 5; }</style>
+    </section>
+
+</section>

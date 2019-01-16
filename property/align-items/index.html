@@ -1,0 +1,217 @@
+---
+layout: single
+property_name: align-items
+---
+
+<section id="align-items" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节:  <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/align-items/" data-property-name="align-items" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="align-content">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+                target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-items" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+        <h2 class="property-name"><a href="#align-items"><span>#</span>align-items</a></h2>
+        <div class="property-description">
+            <p>定义了在 flexbox 容器的一行内，子元素在<strong>纵向</strong>轴的对齐方式。</p>
+        </div>
+    </header>
+    <style type="text/css">
+        .align-items {
+            background: hsl(0, 0%, 95%);
+            display: flex;
+            height: 200px;
+            justify-content: center;
+            padding: 0;
+        }
+    </style>
+    <style type="text/css">
+        .align-items .square {
+            height: 50px;
+            margin: 0 2px;
+            width: calc(20% - 4px);
+        }
+
+        .align-items .square:nth-child(2) {
+            height: 100px;
+        }
+
+        .align-items .square:nth-child(4) {
+            height: 75px;
+        }
+
+        .align-items .line {
+            left: 2px;
+            position: absolute;
+            right: 2px;
+        }
+    </style>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: flex-start;">align-items: flex-start;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong>起始处</strong>对齐。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于<em>垂直</em>方向的<em>顶部</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-flex-start">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-flex-start {
+                align-items: flex-start;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-flex-start .line {
+                top: 0;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: flex-end;">align-items: flex-end;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong>末尾处</strong>对齐。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于<em>垂直</em>方向的<em>底部</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-flex-end">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-flex-end {
+                align-items: flex-end;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-flex-end .line {
+                bottom: 0;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: center;">align-items: center;</code></p>
+            <div class="example-description">
+              <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong>中间</strong>对齐。</p>
+              <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于<em>垂直</em>方向的<em>中间</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-center">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-center {
+                align-items: center;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-center .line {
+                top: 50%;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: baseline;">align-items: baseline;</code></p>
+            <div class="example-description">
+              <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong> baseline </strong>对齐。</p>
+              <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于以自身<em>文字</em>为横向水平线的<em>baseline</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-baseline">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-baseline {
+                align-items: baseline;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-baseline .line {
+                top: 55px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: stretch;">align-items: stretch;</code></p>
+            <div class="example-description">
+              <p>flexbox 的子元素将拉伸覆盖整个<strong>纵向轴</strong>。</p>
+              <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素将填满整个纵向的空间。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-stretch">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-stretch {
+                align-items: stretch;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-stretch .square {
+                height: auto;
+            }
+
+            #align-items-stretch .square:nth-child(2) {
+                height: auto;
+            }
+
+            #align-items-stretch .square:nth-child(4) {
+                height: auto;
+            }
+
+            #align-items-stretch .line {
+                display: none;
+            }
+        </style>
+    </section>
+</section>

@@ -1,0 +1,1592 @@
+<section id="align-content" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/align-content/" data-property-name="align-content" data-tooltip="查看该页面的固定链接">固定链接</a> <a
+                class="property-share" data-tooltip="分享给其他好友" data-property-name="align-content">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a>
+            <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-content"
+                data-tooltip="Mozilla Developer Network" rel="external">MDN</a>
+        </nav>
+        <h2 class="property-name"><a href="#align-content"><span>#</span>align-content</a></h2>
+        <div class="property-description">
+            <p>定义 flexbox 容器中每一行的对齐方式。此属性仅当预先设置了 <code>flex-wrap: wrap</code> 后有效，且 flexbox 的子元素有<strong>多行</strong>。</p>
+        </div>
+    </header>
+    <style type="text/css">
+        .align-content {
+            background: hsl(0, 0%, 95%);
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            padding: 0;
+        }
+    </style>
+    <style type="text/css">
+        .align-content .square {
+            height: 46px;
+            margin: 2px;
+            width: 30%;
+        }
+
+        .align-content .square:nth-child(2) {
+            height: 96px;
+        }
+
+        .align-content .box {
+            height: 150px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .align-content .box--red:before {
+            content: "First line";
+        }
+
+        .align-content .box--green {
+            top: 150px;
+        }
+
+        .align-content .box--green:before {
+            content: "Second line";
+        }
+    </style>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-default" data-tooltip="这是属性的默认值">默认属性</code> <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: stretch;">align-content: stretch;</code></p>
+            <div class="example-description">
+                <p>每一行拉伸平分并<em>填充</em>剩余空间</p>
+                <p>此示例中，容器高为 <code>300px</code>。 所有的方块高 <code>50px</code>，除了第二个的高度为 <code>100px</code>。</p>
+                <ul>
+                    <li>第一行高 <strong>100px</strong></li>
+                    <li>第二行高 <strong>50px</strong></li>
+                    <li>容器剩余高度 <strong>150px</strong></li>
+                </ul>
+                <p>剩余空间被两行平分:</p>
+                <ul>
+                    <li>第一行的高度变成了 <strong>175px</strong></li>
+                    <li>第二行变成了 <strong>125px</strong></li>
+                </ul>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-stretch">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-stretch {
+                align-content: stretch;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-stretch .box--red {
+                height: 175px;
+            }
+
+            #align-content-stretch .box--green {
+                height: 125px;
+                top: 175px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: flex-start;">align-content: flex-start;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。所有的元素都将靠纵向轴<strong>起始处</strong>对齐。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-flex-start">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-flex-start {
+                align-content: flex-start;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-flex-start .box--red {
+                height: 100px;
+            }
+
+            #align-content-flex-start .box--green {
+                height: 50px;
+                top: 100px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: flex-end;">align-content: flex-end;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。所有的元素都将靠纵向轴<strong>末尾处</strong>对齐。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-flex-end">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-flex-end {
+                align-content: flex-end;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-flex-end .box--red {
+                height: 100px;
+                top: 150px;
+            }
+
+            #align-content-flex-end .box--green {
+                height: 50px;
+                top: 250px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: center;">align-content: center;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。所有的元素都将靠纵向轴<strong>中间</strong>对齐。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-center">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-center {
+                align-content: center;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-center .box--red {
+                height: 100px;
+                top: 75px;
+            }
+
+            #align-content-center .box--green {
+                height: 50px;
+                top: 175px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: space-between;">align-content: space-between;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。剩余空间占据<strong>行之间</strong>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-space-between">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-space-between {
+                align-content: space-between;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-space-between .box--red {
+                height: 100px;
+                top: 0;
+            }
+
+            #align-content-space-between .box--green {
+                height: 50px;
+                top: 250px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: space-around;">align-content: space-around;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。剩余空间平均分配给行元素<strong>之间（上下）</strong>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-space-around">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-space-around {
+                align-content: space-around;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-space-around .box--red {
+                height: 100px;
+                top: 38px;
+            }
+
+            #align-content-space-around .box--green {
+                height: 50px;
+                top: 213px;
+            }
+        </style>
+    </section>
+</section>
+<section id="align-items" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节:  <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/align-items/" data-property-name="align-items" data-tooltip="查看该页面的固定链接">固定链接</a>
+            <a class="property-share"
+                data-tooltip="分享给其他好友" data-property-name="align-content">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a>
+                <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-items" data-tooltip="Mozilla Developer Network"
+                    rel="external">MDN</a>
+        </nav>
+        <h2 class="property-name"><a href="#align-items"><span>#</span>align-items</a></h2>
+        <div class="property-description">
+            <p>定义了在 flexbox 容器的一行内，子元素在<strong>纵向</strong>轴的对齐方式。</p>
+        </div>
+    </header>
+    <style type="text/css">
+        .align-items {
+            background: hsl(0, 0%, 95%);
+            display: flex;
+            height: 200px;
+            justify-content: center;
+            padding: 0;
+        }
+    </style>
+    <style type="text/css">
+        .align-items .square {
+            height: 50px;
+            margin: 0 2px;
+            width: calc(20% - 4px);
+        }
+
+        .align-items .square:nth-child(2) {
+            height: 100px;
+        }
+
+        .align-items .square:nth-child(4) {
+            height: 75px;
+        }
+
+        .align-items .line {
+            left: 2px;
+            position: absolute;
+            right: 2px;
+        }
+    </style>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: flex-start;">align-items: flex-start;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong>起始处</strong>对齐。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于<em>垂直</em>方向的<em>顶部</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-flex-start">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-flex-start {
+                align-items: flex-start;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-flex-start .line {
+                top: 0;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: flex-end;">align-items: flex-end;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong>末尾处</strong>对齐。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于<em>垂直</em>方向的<em>底部</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-flex-end">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-flex-end {
+                align-items: flex-end;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-flex-end .line {
+                bottom: 0;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: center;">align-items: center;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong>中间</strong>对齐。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于<em>垂直</em>方向的<em>中间</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-center">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-center {
+                align-items: center;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-center .line {
+                top: 50%;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: baseline;">align-items: baseline;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素按照<strong>纵向轴</strong>的<strong> baseline </strong>对齐。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素对齐于以自身<em>文字</em>为横向水平线的<em>baseline</em>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-baseline">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-baseline {
+                align-items: baseline;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-baseline .line {
+                top: 55px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-items: stretch;">align-items: stretch;</code></p>
+            <div class="example-description">
+                <p>flexbox 的子元素将拉伸覆盖整个<strong>纵向轴</strong>。</p>
+                <p>默认，纵向轴是垂直的，所以这就意味着 flexbox 的子元素将填满整个纵向的空间。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-items" id="align-items-stretch">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-items-stretch {
+                align-items: stretch;
+            }
+        </style>
+        <style type="text/css">
+            #align-items-stretch .square {
+                height: auto;
+            }
+
+            #align-items-stretch .square:nth-child(2) {
+                height: auto;
+            }
+
+            #align-items-stretch .square:nth-child(4) {
+                height: auto;
+            }
+
+            #align-items-stretch .line {
+                display: none;
+            }
+        </style>
+    </section>
+</section>
+<section id="align-self" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/align-self/" data-property-name="align-self" data-tooltip="查看该页面的固定链接">固定链接</a>
+            <a class="property-share"
+                data-tooltip="分享给其他好友" data-property-name="align-self">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a>
+                <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-self" data-tooltip="Mozilla Developer Network"
+                    rel="external">MDN</a>
+        </nav>
+        <h2 class="property-name">
+      <a href="#align-self"><span>#</span>align-self</a>
+    </h2>
+        <div class="property-description">
+            <p>原理如同 <code>align-items</code>，但是仅仅作用于<strong>一个</strong> flexbox 元素，而不是作用于所有的元素</p>
+
+        </div>
+
+    </header>
+
+    <style type="text/css">
+        .align-self {
+            align-items: center;
+            background: hsl(0, 0%, 95%);
+            display: flex;
+            height: 200px;
+            justify-content: center;
+            padding: 0;
+        }
+    </style>
+
+
+    <style type="text/css">
+        .align-self .square {
+            height: 50px;
+            margin: 0 2px;
+            width: calc(20% - 4px);
+        }
+
+        .align-self .square:nth-child(2) {
+            background: #05ffb0;
+            color: #310736;
+        }
+
+        .align-self .square:nth-child(4) {
+            height: 75px;
+        }
+
+        .align-self .line {
+            left: 2px;
+            position: absolute;
+            right: 2px;
+        }
+
+        .align-self .line--default {
+            top: 50%;
+        }
+
+        .align-self .line--default:before {
+            content: "Items";
+        }
+
+        .align-self .line--red:before {
+            content: "Self";
+        }
+    </style>
+
+
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+                <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: auto;">align-self: auto;</code>
+            </p>
+            <div class="example-description">
+                <p>元素使用 <code>align-items</code> 的值。</p>
+
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-self " id="align-self-auto">
+                    <p class="square square--plum">1</p>
+                    <p class="square target">Target</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--default"></div>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-self-auto {
+                align-self: auto;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-auto .target {
+                align-self: auto;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: flex-start;">align-self: flex-start;</code>
+            </p>
+            <div class="example-description">
+                <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: flex-start</code>，那么仅仅目标元素对齐于纵向轴的起始处。</p>
+                <p>默认，这就意味着元素对齐于<em>垂直</em>方向的<em>顶部</em>。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-self " id="align-self-flex-start">
+                    <p class="square square--plum">1</p>
+                    <p class="square target">Target</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--default"></div>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-self-flex-start {
+                align-self: flex-start;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-flex-start .target {
+                align-self: flex-start;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: flex-end;">align-self: flex-end;</code>
+            </p>
+            <div class="example-description">
+                <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: flex-end</code>，那么仅仅目标元素对齐于纵向轴的末尾处。</p>
+                <p>默认，这就意味着元素对齐于<em>垂直</em>方向的<em>底部</em>。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-self " id="align-self-flex-end">
+                    <p class="square square--plum">1</p>
+                    <p class="square target">Target</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--default"></div>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-self-flex-end {
+                align-self: flex-end;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-flex-end .line--red {
+                bottom: 0;
+            }
+
+            #align-self-flex-end .target {
+                align-self: flex-end;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: center;">align-self: center;</code>
+            </p>
+            <div class="example-description">
+                <p>如果容器有属性 <code>align-items: flex-start</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: center</code>，那么仅仅目标元素对齐于纵向轴的中间。</p>
+                <p>默认，这就意味着元素对齐于<em>垂直</em>方向的<em>中间</em>。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-self " id="align-self-center">
+                    <p class="square square--plum">1</p>
+                    <p class="square target">Target</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--default"></div>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-self-center {
+                align-self: center;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-center {
+                align-items: flex-start;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-center .line--default {
+                top: 0;
+            }
+
+            #align-self-center .line--red {
+                top: 50%;
+            }
+
+            #align-self-center .target {
+                align-self: center;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: baseline;">align-self: baseline;</code>
+            </p>
+            <div class="example-description">
+                <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: baseline</code>，那么仅仅目标元素对齐于纵向轴的 baseline。</p>
+                <p>默认，这就意味着元素沿着文字的 baseline 对齐。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-self " id="align-self-baseline">
+                    <p class="square square--plum">1</p>
+                    <p class="square target">Target</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--default"></div>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-self-baseline {
+                align-self: baseline;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-baseline .line--default {
+                top: 50%;
+            }
+
+            #align-self-baseline .line--red {
+                top: 30px;
+            }
+
+            #align-self-baseline .target {
+                align-self: baseline;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-self: stretch;">align-self: stretch;</code>
+            </p>
+            <div class="example-description">
+                <p>如果容器有属性 <code>align-items: center</code> 且 <strong>目标元素</strong> 有属性 <code>align-self: stretch</code>，那么仅仅目标元素拉伸填充于整个纵向轴。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-self " id="align-self-stretch">
+                    <p class="square square--plum">1</p>
+                    <p class="square target">Target</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="line line--default"></div>
+                    <div class="line line--red"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-self-stretch {
+                align-self: stretch;
+            }
+        </style>
+        <style type="text/css">
+            #align-self-stretch .line--default {
+                top: 50%;
+            }
+
+            #align-self-stretch .line--red {
+                display: none;
+            }
+
+            #align-self-stretch .target {
+                align-self: stretch;
+                height: auto;
+            }
+        </style>
+    </section>
+
+</section>
+<section id="flex-basis" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-basis/" data-property-name="flex-basis" data-tooltip="查看该页面的固定链接">固定链接</a>
+            <a class="property-share"
+                data-tooltip="分享给其他好友" data-property-name="flex-basis">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a>
+                <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-basis" data-tooltip="Mozilla Developer Network"
+                    rel="external">MDN</a>
+        </nav>
+        <h2 class="property-name">
+      <a href="#flex-basis"><span>#</span>flex-basis</a>
+    </h2>
+        <div class="property-description">
+            <p>定义 flexbox 的初始化大小。</p>
+
+        </div>
+
+    </header>
+
+    <style type="text/css">
+        .flex-basis {
+            background: hsl(0, 0%, 95%);
+            display: flex;
+            padding: 1em;
+            word-break: break-all;
+        }
+    </style>
+
+
+
+
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+                <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-basis: auto;">flex-basis: auto;</code>
+            </p>
+            <div class="example-description">
+                <p>元素根据自身的内容自动调整大小，或者根据已定义的 <code>高度</code> 或 <code>宽度</code> 调整大小。</p>
+
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div flex-basis " id="flex-basis-auto">
+                    <p class="block block--alpha">Flexbox item</p>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #flex-basis-auto {
+                flex-basis: auto;
+            }
+        </style>
+        <style type="text/css">
+            #flex-basis-auto .block {
+                flex-basis: auto;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-basis: 80px;">flex-basis: 80px;</code>
+            </p>
+            <div class="example-description">
+                <p>你可以定义 <strong>pixel</strong> 或 <strong>(r)em</strong> 值。元素将换行其内容避开任何的元素溢出。</p>
+
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div flex-basis " id="flex-basis-80px">
+                    <p class="block block--alpha">Flexbox item</p>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #flex-basis-80px {
+                flex-basis: 80px;
+            }
+        </style>
+        <style type="text/css">
+            #flex-basis-80px .block {
+                flex-basis: 80px;
+            }
+        </style>
+    </section>
+
+</section>
+<section id="flex-direction" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-direction/" data-property-name="flex-direction" data-tooltip="查看该页面的固定链接">固定链接</a> <a
+                class="property-share" data-tooltip="分享给其他好友" data-property-name="flex-direction">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a>
+            <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-direction"
+                data-tooltip="Mozilla Developer Network" rel="external">MDN</a>
+        </nav>
+        <h2 class="property-name">
+      <a href="#flex-direction"><span>#</span>flex-direction</a>
+    </h2>
+        <div class="property-description">
+            <p>定义了元素在 flexbox 容器中的排序方式。</p>
+
+        </div>
+
+    </header>
+
+    <style type="text/css">
+        .flex-direction {
+            display: flex;
+        }
+    </style>
+
+
+
+
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+                <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-direction: row;">flex-direction: row;</code>
+            </p>
+            <div class="example-description">
+                <p>元素按照与<strong>文字方向（书写模式）相同的</strong>方向，沿着<strong>主（横）轴</strong>。</p>
+
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div flex-direction " id="flex-direction-row">
+                    <p class="block block--alpha"><strong>1.</strong> One</p>
+                    <p class="block block--beta"><strong>2.</strong> Two</p>
+                    <p class="block block--pink"><strong>3.</strong> Three</p>
+                    <p class="block block--yellow"><strong>4.</strong> Four</p>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #flex-direction-row {
+                flex-direction: row;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-direction: row-reverse;">flex-direction: row-reverse;</code>
+            </p>
+            <div class="example-description">
+                <p>元素按照与<strong>文字方向（书写模式）相反的</strong>方向，沿着<strong>主（横）轴</strong>。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div flex-direction " id="flex-direction-row-reverse">
+                    <p class="block block--alpha"><strong>1.</strong> One</p>
+                    <p class="block block--beta"><strong>2.</strong> Two</p>
+                    <p class="block block--pink"><strong>3.</strong> Three</p>
+                    <p class="block block--yellow"><strong>4.</strong> Four</p>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #flex-direction-row-reverse {
+                flex-direction: row-reverse;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-direction: column;">flex-direction: column;</code>
+            </p>
+            <div class="example-description">
+                <p>元素按照与<strong>文字方向（书写模式）相同的</strong>方向，沿着<strong>纵向轴</strong>。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div flex-direction " id="flex-direction-column">
+                    <p class="block block--alpha"><strong>1.</strong> One</p>
+                    <p class="block block--beta"><strong>2.</strong> Two</p>
+                    <p class="block block--pink"><strong>3.</strong> Three</p>
+                    <p class="block block--yellow"><strong>4.</strong> Four</p>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #flex-direction-column {
+                flex-direction: column;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name">
+
+
+                <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-direction: column-reverse;">flex-direction: column-reverse;</code>
+            </p>
+            <div class="example-description">
+                <p>元素按照与<strong>文字方向（书写模式）相反的</strong>方向，沿着<strong>纵向轴</strong>。</p>
+            </div>
+        </header>
+
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div flex-direction " id="flex-direction-column-reverse">
+                    <p class="block block--alpha"><strong>1.</strong> One</p>
+                    <p class="block block--beta"><strong>2.</strong> Two</p>
+                    <p class="block block--pink"><strong>3.</strong> Three</p>
+                    <p class="block block--yellow"><strong>4.</strong> Four</p>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #flex-direction-column-reverse {
+                flex-direction: column-reverse;
+            }
+        </style>
+    </section>
+
+</section>
+<section id="flex-flow" class="property property--shorthand">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-flow/" data-property-name="flex-flow" data-tooltip="查看该页面的固定链接">固定链接</a>
+            <a class="property-share"
+                data-tooltip="分享给其他好友" data-property-name="flex-flow">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a>
+                <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-flow" data-tooltip="Mozilla Developer Network"
+                    rel="external">MDN</a>
+        </nav>
+        <h2 class="property-name">
+      <a href="#flex-flow"><span>#</span>flex-flow</a>
+    </h2>
+        <div class="property-description">
+            <p>是 <code class="shorthand"><a class="hash" href="{{site.url}}/property/flex-direction" data-property-name="flex-direction">flex-direction</a></code> 和 <code class="shorthand"><a class="hash" href="{{site.url}}/property/flex-wrap" data-property-name="flex-wrap">flex-wrap</a></code>                的缩写形式。</p>
+
+        </div>
+
+    </header>
+</section>
+<section id="flex-grow" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-grow/" data-property-name="flex-grow" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="flex-grow">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-grow" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#flex-grow"><span>#</span>flex-grow</a>
+    </h2>
+    <div class="property-description">
+      <p>定义了元素当有可用空间的时候如何 <strong>占用</strong>。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.flex-grow { background: #310736;border-radius: 3px;display: flex;padding: 1em; }</style>
+
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-grow: 0;">flex-grow: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>元素 <strong>不</strong> 不占用剩余空间。它仅仅占用自身所需空间。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-grow " id="flex-grow-0"><p class="block block--alpha"><strong>Target</strong><p class="block block--pink">Item</p><p class="block block--yellow">Item</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-grow-0{ flex-grow:0;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-grow: 1;">flex-grow: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>元素将 <strong>占用</strong> 扩展因子 <strong>1</strong>。如果没有其他元素也设置了 <code>flex-grow</code> 的话，它将占用剩下的所有空间。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-grow " id="flex-grow-1"><p class="block block--alpha"><strong>Target</strong><p class="block block--pink">Item</p><p class="block block--yellow">Item</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-grow-1{ flex-grow:1;}</style>
+        <style type="text/css">#flex-grow-1 .block--alpha { flex-grow: 1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-grow: 2;">flex-grow: 2;</code>
+        </p>
+        <div class="example-description">
+          <p>因为 flex-grow 的值是<strong>相对的</strong>，它的具体表现还取决于此元素的<strong>同级元素</strong>。</p>
+<p>在这个例子中，剩余空间被分隔成了 <strong>3</strong> 个扩展因子：</p>
+<ul><li>三分之<strong>一</strong>分配给了<strong>绿色</strong> 元素</li><li>三分之<strong>二</strong>分配给了<strong>粉色</strong>元素</li><li>没有其他空间分配给<strong>黄色</strong>元素，它保留了自身原本占用的大小。</li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-grow " id="flex-grow-2"><p class="block block--alpha">Item<br><strong>1</strong><p class="block block--pink">Item<br><strong>2</strong></p><p class="block block--yellow">Item<br><strong>0</strong></p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-grow-2{ flex-grow:2;}</style>
+        <style type="text/css">#flex-grow-2 .block--alpha { flex-grow: 1; }#flex-grow-2 .block--pink { flex-grow: 2; }</style>
+    </section>
+
+</section>
+<section id="flex-shrink" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-shrink/" data-property-name="flex-shrink" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="flex-shrink">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-shrink" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#flex-shrink"><span>#</span>flex-shrink</a>
+    </h2>
+    <div class="property-description">
+      <p>定义了当没有足够空间的时候，元素如何<strong>压缩</strong>自身空间。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.flex-shrink { background: #310736;border-radius: 3px;display: flex;padding: 1em;width: 300px; }</style>
+
+
+    <style type="text/css">.flex-shrink .block { flex-shrink: 1; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-shrink: 1;">flex-shrink: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>当主轴（横向轴）没有<strong>足够</strong>空间的时候，元素将按照扩展因子 <strong>1</strong> 来进行<strong>压缩</strong>，也将导致换行（折叠）其自身的内容。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-shrink " id="flex-shrink-1"><p class="block block--alpha"><strong>This is the flex-shrink target</strong><p class="block block--pink">Foo bar</p><p class="block block--yellow">Lorem ipsum</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-shrink-1{ flex-shrink:1;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-shrink: 0;">flex-shrink: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>元素<strong>不</strong>压缩：占用它所需要的宽且<strong>不</strong>换行（折叠）自身的内容。同级元素将压缩给出目标元素足够的控件。</p>
+<p>因为目标元素不换行（折叠）自身的内容，所以可能会导致 flexbox 容器的内容产生元素移除。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-shrink " id="flex-shrink-0"><p class="block block--alpha"><strong>This is the flex-shrink target</strong><p class="block block--pink">Foo bar</p><p class="block block--yellow">Lorem ipsum</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-shrink-0{ flex-shrink:0;}</style>
+        <style type="text/css">#flex-shrink-0 .block--alpha { flex-shrink: 0; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-shrink: 2;">flex-shrink: 2;</code>
+        </p>
+        <div class="example-description">
+          <p>因为 flex-shrink 的值是<strong>相对</strong>的，它的具体表现还取决于此元素的<strong>同级元素</strong>。</p>
+<p>在此例子中，绿色的元素占用了 100% 的宽度。此部分的空间将从它的两个同级元素中<strong>占用</strong>，并且占用被分成了 <strong>4</strong>份：</p>
+<ul><li>四分之<strong>三</strong>从<strong>红色</strong>元素中获取（红色压缩四分之三）</li><li>四分之<strong>一</strong>从<strong>黄色</strong>元素中获取（黄色压缩四分之一）</li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-shrink " id="flex-shrink-2"><p class="block block--alpha">Width<br><strong>100%</strong><p class="block block--pink">Shrink<br><strong>3</strong></p><p class="block block--yellow">Shrink<br><strong>1</strong></p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-shrink-2{ flex-shrink:2;}</style>
+        <style type="text/css">#flex-shrink-2 .block--alpha { flex-grow: 1;width: 100%; }#flex-shrink-2 .block--pink { flex-shrink: 3;word-break: break-all; }#flex-shrink-2 .block--yellow { flex-shrink: 1;word-break: break-all; }</style>
+    </section>
+
+</section>
+<section id="flex-wrap" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-wrap/" data-property-name="flex-wrap" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="flex-wrap">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-wrap" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#flex-wrap"><span>#</span>flex-wrap</a>
+    </h2>
+    <div class="property-description">
+      <p>定义了元素在 flexbox 容器中是显示<strong>一行</strong>还是<strong>多行</strong>。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.flex-wrap { background: #310736;display: flex;max-width: 360px; }</style>
+
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-wrap: nowrap;">flex-wrap: nowrap;</code>
+        </p>
+        <div class="example-description">
+          <p>元素将始终保持<strong>单行</strong>，最终，如果需要将会进行元素溢出。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-wrap " id="flex-wrap-nowrap"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-wrap-nowrap{ flex-wrap:nowrap;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-wrap: wrap;">flex-wrap: wrap;</code>
+        </p>
+        <div class="example-description">
+          <p>元素将根据实际情况分布在<strong>多行</strong>。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-wrap " id="flex-wrap-wrap"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-wrap-wrap{ flex-wrap:wrap;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-wrap: wrap-reverse;">flex-wrap: wrap-reverse;</code>
+        </p>
+        <div class="example-description">
+          <p>元素将根据实际情况分布在<strong>多行</strong>。任何新增的行都将会被添加在之前的一行<strong>之前</strong>。</p>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div flex-wrap " id="flex-wrap-wrap-reverse"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#flex-wrap-wrap-reverse{ flex-wrap:wrap-reverse;}</style>
+    </section>
+
+</section>
+<section id="justify-content" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/justify-content/" data-property-name="justify-content" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="justify-content">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/justify-content" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#justify-content"><span>#</span>justify-content</a>
+    </h2>
+    <div class="property-description">
+      <p>定义了在 flexbox 容器中，元素沿着<strong>主轴（横向轴）</strong>的对齐情况。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.justify-content { background: hsl(48, 100%, 67%);background: #310736;display: flex;padding: 0; }</style>
+
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="justify-content: flex-start;">justify-content: flex-start;</code>
+        </p>
+        <div class="example-description">
+          <p>元素朝着主轴（横向轴）的<strong>开始</strong>方向排列。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div justify-content " id="justify-content-flex-start"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#justify-content-flex-start{ justify-content:flex-start;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="justify-content: flex-end;">justify-content: flex-end;</code>
+        </p>
+        <div class="example-description">
+          <p>元素朝着主轴（横向轴）的<strong>末尾</strong>方向排列。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div justify-content " id="justify-content-flex-end"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#justify-content-flex-end{ justify-content:flex-end;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="justify-content: center;">justify-content: center;</code>
+        </p>
+        <div class="example-description">
+          <p>元素朝着主轴（横向轴）的<strong>中间</strong>排列。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div justify-content " id="justify-content-center"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#justify-content-center{ justify-content:center;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="justify-content: space-between;">justify-content: space-between;</code>
+        </p>
+        <div class="example-description">
+          <p>剩余的空间平均分布在元素<strong>之间</strong>。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div justify-content " id="justify-content-space-between"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#justify-content-space-between{ justify-content:space-between;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="justify-content: space-around;">justify-content: space-around;</code>
+        </p>
+        <div class="example-description">
+          <p>剩余的空间平均分布在元素的<strong>开始和结束</strong>处：在第一个元素的前面和最后一个元素的后面也分配空间。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div justify-content " id="justify-content-space-around"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#justify-content-space-around{ justify-content:space-around;}</style>
+    </section>
+
+</section>
+<section id="order" class="property">
+  <header class="property-header">
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/order/" data-property-name="order" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="order">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/order" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+    <h2 class="property-name">
+      <a href="#order"><span>#</span>order</a>
+    </h2>
+    <div class="property-description">
+      <p>定义元素的排序。</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.order { display: flex; }</style>
+
+
+    <style type="text/css">.order .block { flex-grow: 1;flex-shrink: 1; }.order em { font-style: normal; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: 0;">order: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>元素的排序按照其 <strong>HTML 代码</strong>中的排序。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-0"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 0</strong></em></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: 1;">order: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>元素的排序与其<em>同级元素</em>具有<strong>相关性</strong>。最终的排序将会考虑到所有元素的排序值。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order-1 .block--pink { order: 1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: -1;">order: -1;</code>
+        </p>
+        <div class="example-description">
+          <p>值你可以使用<strong>负数</strong>。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order--1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: -1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order--1 .block--pink { order: -1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="order: 9;">order: 9;</code>
+        </p>
+        <div class="example-description">
+          <p>你可以为每一个元素设置<strong>不同的</strong>值。</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-9"><p class="block block--alpha">One<br><em>order: 13</em></p><p class="block block--beta">Two<br><em>order: -7</em></p><p class="block block--pink"><strong>Target<br><em>order: 9</em></strong></p><p class="block block--yellow">Four<br><em>order: 5</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order-9 .block--alpha { order: 13; }#order-9 .block--beta { order: -7; }#order-9 .block--pink { order: 9; }#order-9 .block--yellow { order: 5; }</style>
+    </section>
+
+</section>

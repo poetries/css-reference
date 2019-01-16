@@ -1,0 +1,133 @@
+<script type="text/javascript">
+window.carbonLoaded = false;
+
+window.helloCarbon = function() {
+  window.carbonLoaded = true;
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var $menuHello = document.getElementById('menuHello');
+//   var $huggingFace = document.getElementById('huggingFace');
+//   var $carbon = document.getElementById('carbon');
+//   var $placeholder = document.getElementById('placeholder');
+//
+//   setTimeout(function() {
+//     if (window.carbonLoaded) {
+//       $menuHello.style.minHeight = '218px';
+//       $huggingFace.style.display = 'none';
+//       $carbon.style.display = 'block';
+//     } else {
+//       $menuHello.style.minHeight = '0';
+//       $huggingFace.style.display = 'block';
+//       $carbon.style.display = 'none';
+//     }
+//     $placeholder.style.display = 'none';
+//   }, 2000);
+// });
+</script>
+
+<aside class="menu">
+  <header class="menu-header">
+    <a id="logo" class="menu-logo" href="{{site.url}}">
+      <figure>
+        <img class="menu-logo-icon" src="{{site.url}}/images/css-reference-icon.png" alt="CSS Reference icon">
+        <img class="menu-logo-type" src="{{site.url}}/images/css-reference-type.png" alt="CSS Reference type">
+      </figure>
+    </a>
+  </header>
+  <nav class="menu-collections">
+    <ul>
+      <li><a class="menu-collection-link{% if page.template == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}/">All properties</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}" href="{{site.url}}/animations/">Animations</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Backgrounds' %} menu-collection-link--active{% endif %}" href="{{site.url}}/backgrounds/">Backgrounds</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}" href="{{site.url}}/box-model/">Box model</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}" href="{{site.url}}/flexbox/">Flexbox</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Positioning' %} menu-collection-link--active{% endif %}" href="{{site.url}}/positioning/">Positioning</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Transitions' %} menu-collection-link--active{% endif %}" href="{{site.url}}/transitions/">Transitions</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
+    </ul>
+  </nav>
+  {% if page.template != "index" %}
+    <nav id="menu-nav" class="menu-nav">
+      <div class="menu-search">
+        <input id="menu-search-input" type="search" autocomplete="off" placeholder="属性搜索">
+        <i class="icon is-search"></i>
+      </div>
+      <div id="menu-list" class="menu-list">
+        <ul id="menu-list-ul" class="menu-list-ul">
+          {% if page.menu_list && page.layout == "collection" %}
+            {% include collections/{{page.menu_list}}.html %}
+          {% else %}
+            {% include lists/menu-list.html %}
+          {% endif %}
+        </ul>
+        <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
+        <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
+      </div>
+      <a id="menu-nav-close" class="menu-close">
+        <i class="icon is-close"></i>
+        <strong>Close</strong>
+      </a>
+    </nav>
+  {% endif %}
+  <!-- <footer id="menuHello" class="menu-hello"> -->
+    <!-- <div id="huggingFace">
+      <p>
+        CSS Reference is <strong>free</strong> and <br>
+        always will be!
+      </p>
+      <p>
+        Please whitelist us in <br>
+        your ad blocker.
+      </p>
+      <p>
+        Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
+      </p>
+    </div> -->
+    <!-- <div id="placeholder" class="placeholder">
+      <div class="placeholder-image"><div></div></div>
+      <div class="placeholder-content"><div></div><div></div><div></div></div>
+      <div class="placeholder-footer"><div></div></div>
+    </div> -->
+    <!-- <div id="carbon">
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=cssreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script>
+    </div> -->
+  <!-- </footer> -->
+</aside>
+
+<footer class="footer">
+  <p class="footer-title">
+    <strong>{{site.subtitle}}</strong> <small>Created by <a target="_blank" href="https://twitter.com/jgthms">@jgthms</a></small> <small>Translated into Chinese by <a target="_blank" href="https://github.com/poetries">@Poetries</a></small>
+  </p>
+  <p class="footer-share footer-share--social">
+    <!-- <strong class="footer-share-label">Share</strong>
+    <a class="footer-share-button is-twitter"
+      data-social-network="Twitter"
+      data-social-action="tweet"
+      data-social-target="{{site.url}}{{page.url}}"
+      href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
+      rel="external nofollow"
+      target="_blank">
+      {% include svg/twitter.html %}
+    </a>
+    <a class="footer-share-button is-facebook"
+      href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
+      rel="external nofollow"
+      target="_blank">
+      {% include svg/facebook.html %}
+    </a>
+    <a id="menu-nav-open" class="footer-share-nav">Menu</a> -->
+  </p>
+  <!-- <div class="footer-facebook">
+    <iframe class="footer-iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  </div> -->
+  <div class="footer-github">
+    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=poetries&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+  </div>
+  <!-- <p class="footer-share footer-share--contribute">
+    <strong class="footer-share-label">Contribute</strong>
+    <a class="footer-share-button is-github" href="https://github.com/jgthms/css-reference" target="_blank">
+      {% include svg/github.html %}
+    </a>
+  </p> -->
+</footer>

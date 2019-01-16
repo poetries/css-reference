@@ -1,0 +1,293 @@
+---
+layout: single
+property_name: align-content
+---
+
+<section id="align-content" class="property">
+    <header class="property-header">
+        <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/align-content/" data-property-name="align-content" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="align-content">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+                target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-content" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
+        <h2 class="property-name"><a href="#align-content"><span>#</span>align-content</a></h2>
+        <div class="property-description">
+            <p>定义 flexbox 容器中每一行的对齐方式。此属性仅当预先设置了 <code>flex-wrap: wrap</code> 后有效，且 flexbox 的子元素有<strong>多行</strong>。</p>
+        </div>
+    </header>
+    <style type="text/css">
+        .align-content {
+            background: hsl(0, 0%, 95%);
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            padding: 0;
+        }
+    </style>
+    <style type="text/css">
+        .align-content .square {
+            height: 46px;
+            margin: 2px;
+            width: 30%;
+        }
+
+        .align-content .square:nth-child(2) {
+            height: 96px;
+        }
+
+        .align-content .box {
+            height: 150px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .align-content .box--red:before {
+            content: "First line";
+        }
+
+        .align-content .box--green {
+            top: 150px;
+        }
+
+        .align-content .box--green:before {
+            content: "Second line";
+        }
+    </style>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-default" data-tooltip="这是属性的默认值">默认属性</code> <code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: stretch;">align-content: stretch;</code></p>
+            <div
+                class="example-description">
+                <p>每一行拉伸平分并<em>填充</em>剩余空间</p>
+                <p>此示例中，容器高为 <code>300px</code>。 所有的方块高 <code>50px</code>，除了第二个的高度为 <code>100px</code>。</p>
+                <ul>
+                    <li>第一行高 <strong>100px</strong></li>
+                    <li>第二行高 <strong>50px</strong></li>
+                    <li>容器剩余高度 <strong>150px</strong></li>
+                </ul>
+                <p>剩余空间被两行平分:</p>
+                <ul>
+                    <li>第一行的高度变成了 <strong>175px</strong></li>
+                    <li>第二行变成了 <strong>125px</strong></li>
+                </ul>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-stretch">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-stretch {
+                align-content: stretch;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-stretch .box--red {
+                height: 175px;
+            }
+
+            #align-content-stretch .box--green {
+                height: 125px;
+                top: 175px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: flex-start;">align-content: flex-start;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。所有的元素都将靠纵向轴<strong>起始处</strong>对齐。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-flex-start">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-flex-start {
+                align-content: flex-start;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-flex-start .box--red {
+                height: 100px;
+            }
+
+            #align-content-flex-start .box--green {
+                height: 50px;
+                top: 100px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: flex-end;">align-content: flex-end;</code></p>
+            <div class="example-description">
+              <p>每一行仅仅占用<em>实际所需</em>的空间。所有的元素都将靠纵向轴<strong>末尾处</strong>对齐。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-flex-end">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-flex-end {
+                align-content: flex-end;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-flex-end .box--red {
+                height: 100px;
+                top: 150px;
+            }
+
+            #align-content-flex-end .box--green {
+                height: 50px;
+                top: 250px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: center;">align-content: center;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。所有的元素都将靠纵向轴<strong>中间</strong>对齐。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-center">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-center {
+                align-content: center;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-center .box--red {
+                height: 100px;
+                top: 75px;
+            }
+
+            #align-content-center .box--green {
+                height: 50px;
+                top: 175px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: space-between;">align-content: space-between;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。剩余空间占据<strong>行之间</strong>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-space-between">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-space-between {
+                align-content: space-between;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-space-between .box--red {
+                height: 100px;
+                top: 0;
+            }
+
+            #align-content-space-between .box--green {
+                height: 50px;
+                top: 250px;
+            }
+        </style>
+    </section>
+    <section class="example">
+        <header class="example-header">
+            <p class="example-name"><code class="example-value" data-tooltip="点击复制" data-clipboard-text="align-content: space-around;">align-content: space-around;</code></p>
+            <div class="example-description">
+                <p>每一行仅仅占用<em>实际所需</em>的空间。剩余空间平均分配给行元素<strong>之间（上下）</strong>。</p>
+            </div>
+        </header>
+        <aside class="example-preview">
+            <div class="example-browser"><i></i><i></i><i></i></div>
+            <div class="example-output">
+                <div class="example-output-div align-content" id="align-content-space-around">
+                    <p class="square square--plum">1</p>
+                    <p class="square square--plum">2</p>
+                    <p class="square square--plum">3</p>
+                    <p class="square square--plum">4</p>
+                    <p class="square square--plum">5</p>
+                    <div class="box box--red"></div>
+                    <div class="box box--green"></div>
+                </div>
+            </div>
+        </aside>
+        <style type="text/css">
+            #align-content-space-around {
+                align-content: space-around;
+            }
+        </style>
+        <style type="text/css">
+            #align-content-space-around .box--red {
+                height: 100px;
+                top: 38px;
+            }
+
+            #align-content-space-around .box--green {
+                height: 50px;
+                top: 213px;
+            }
+        </style>
+    </section>
+</section>

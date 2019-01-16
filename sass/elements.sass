@@ -1,0 +1,139 @@
+.box
+  border: 2px solid $text
+  border-radius: 3px
+  position: relative
+  &:before
+    background: $text
+    border-radius: 1px 0 2px 0
+    color: #fff
+    content: ""
+    display: inline-block
+    font-size: 0.8em
+    padding: 0 6px 2px 4px
+    vertical-align: top
+.box--red
+  border-color: $red
+  &:before
+    background: $red
+.box--green
+  border-color: $green
+  &:before
+    background: $green
+.box--plum
+  border-color: $plum
+  &:before
+    background: $plum
+.box--alpha
+  border-color: $alpha
+  &:before
+    background: $alpha
+    color: $alpha-invert
+
+.line
+  background: $text
+  height: 1px
+  position: relative
+  &:before
+    background: $text
+    border-radius: 2px
+    color: #fff
+    content: "Line"
+    display: inline-block
+    font-size: 10px
+    height: 15px
+    line-height: 15px
+    margin-top: -6px
+    padding: 0 4px
+    vertical-align: top
+.line--red
+  background: $red
+  &:before
+    background: $red
+
+.square
+  align-items: center
+  background: $border
+  border-radius: 3px
+  color: $text
+  display: flex
+  height: 75px
+  justify-content: center
+  line-height: 1.2
+  padding: 0
+  text-align: center
+  width: 75px
+.square--plum
+  background: $plum
+  color: $plum-invert
+  &:before
+    background: $plum
+.square--alpha
+  background: $alpha
+  color: $plum
+  &:before
+    background: $alpha
+.square--pink
+  background: $pink
+  color: #fff
+  &:before
+    background: $pink
+
+.block
+  background: $background
+  border-radius: 3px
+  color: $text
+  display: block
+  line-height: 1.2
+  padding: 1em
+  strong
+    color: inherit
+.block--alpha
+  background: $alpha
+  color: $plum
+.block--beta
+  background: $beta
+  color: $plum
+.block--pink
+  background: $pink
+  color: $plum
+.block--plum
+  background: $plum
+  color: #fff
+.block--yellow
+  background: $yellow
+  color: $plum
+.block--orange
+  background: $orange
+  color: $plum
+.block--green
+  background: $green
+  color: $plum
+.block--turquoise
+  background: $turquoise
+  color: $plum
+.block--blue
+  background: $blue
+  color: $plum
+.block--purple
+  background: $purple
+  color: $plum
+.block--red
+  background: $red
+  color: $plum
+
+.natural,
+.actual
+  +center
+  border-radius: 3px
+  line-height: 1.2
+  padding: 0.8em 1em
+
+.natural
+  border: 2px dotted $red
+  color: $red
+
+.actual
+  +center
+  background: $alpha
+  border: 2px solid $alpha
+  color: $plum
