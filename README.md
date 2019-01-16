@@ -9,6 +9,9 @@
 > 采用`jekyll`搭建部署，https://jekyllrb.com
 
 ```bash
+# 安装ruby才可以用gem命令
+# 安装文档 http://www.runoob.com/ruby/ruby-installation-unix.html
+
 # install jekyll
 gem install bundler jekyll
 
