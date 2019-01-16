@@ -5,6 +5,7 @@ node_js: stable
 install:
   - sudo apt-get install ruby
   - gem install bundler jekyll
+  - bundle install 
   - npm install
 
 #before_script:
