@@ -3,9 +3,9 @@ subtitle: " CSS 属性可视化文档"
 description: "cssreference文档使用了大量的可视化图形以及动画对属性进行了解释。"
 share: "CSS Reference: a  visual guide to the most popular CSS properties."
 baseurl: /css-reference
-url: http://blog.poetries.top/css-reference
+url: https://blog.poetries.top/css-reference
 # 腾讯分析
-tongji: http://tajs.qq.com/stats?sId=59154049 
+tongji: https://tajs.qq.com/stats?sId=59154049 
 markdown: kramdown
 permalink: pretty
 exclude: ['node_modules']

@@ -1,8 +1,8 @@
-# Translated into Chinese: [http://blog.poetries.top/css-reference](http://blog.poetries.top/css-reference)
+# Translated into Chinese: [https://blog.poetries.top/css-reference](https://blog.poetries.top/css-reference)
 
-# [CSS Reference](http://blog.poetries.top/css-reference): a free visual guide to the most popular CSS properties
+# [CSS Reference](https://blog.poetries.top/css-reference): a free visual guide to the most popular CSS properties
 
-[![CSS Reference screenshot](http://raw.github.com/jgthms/css-reference/master/images/css-reference-share.png)](http://blog.poetries.top/css-reference)
+[![CSS Reference screenshot](https://raw.github.com/jgthms/css-reference/master/images/css-reference-share.png)](https://blog.poetries.top/css-reference)
 
 # 部署
 

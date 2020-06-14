@@ -3,7 +3,7 @@ subtitle: "CSS 属性可视化文档"
 description: "CSS Reference is a  visual guide to CSS. It features the most popular properties, and explains them with illustrated and animated examples."
 share: "CSS Reference: a visual guide to the most popular CSS properties."
 baseurl: /css-reference
-url: http://blog.poetries.top/css-reference
+url: https://blog.poetries.top/css-reference
 # 腾讯分析
 tongji: http://tajs.qq.com/stats?sId=59154049
 markdown: kramdown
